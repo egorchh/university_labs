@@ -1,51 +1,64 @@
 .main {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: calc(100vh - (var(--footer-height) + var(--header-height)));
     padding: 0 20px;
+    overflow-y: auto;
 }
 
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.labs {
+    margin-top: 30px;
+}
+
+.lab {
+    padding: 15px 20px 30px;
     border: 1px dashed gray;
-    border-radius: 28px;
-    width: 80%;
-    height: 80%;
+    border-radius: 14px;
 }
 
-.list_item {
-    position: relative;
+.lab_title {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.list_item:not(:first-child) {
+.description {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    margin-left: 5px;
+}
+
+.lab:not(:first-child) {
     margin-top: 20px;
 }
 
-.list_item::after {
-    content: '';
-    display: none;
-    position: absolute;
-    top: -25%;
-    left: -20px;
-    width: var(--sidebar-width);
-    height: 150%;
-    border-radius: 14px;
-    background: rgba(255, 0, 0, 0.2);
-    pointer-events: none;
+.lab_description {
+    padding: 5px 10px 8px 10px;
 }
 
-.list_item:hover::after {
-    display: block;
+.task_description {
+    padding: 3px 8px 5px 8px;
 }
 
-.list_item-icon {
-    margin-left: 5px;
-    transform: rotate(90deg);
+.lab_tasks {
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
-.list_link {
+.lab_task:not(:first-child) {
+    margin-top: 15px;
+}
+
+.task_link {
     display: flex;
+}
+
+.task_link:hover {
+    color: rgb(255, 125, 125);
+}
+
+.task_icon {
+    transform: rotate(90deg);
+    margin-right: 5px;
 }

@@ -3,7 +3,7 @@
     <xsl:template match="/">
         <html lang="en">
             <body>
-                <h4 id="author" title="GossJS">Podolskij Egor</h4>
+                <h4 id="author" title="GossJS" style="display: none">Podolskij Egor</h4>
                 <xsl:apply-templates />
             </body>
         </html>
